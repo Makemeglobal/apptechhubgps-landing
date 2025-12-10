@@ -1,53 +1,20 @@
 import { motion } from 'framer-motion';
-import { Play, ArrowRight, Satellite, Radio, Shield } from 'lucide-react';
+import { Play, ArrowRight, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24">
       {/* Background Effects */}
       <div className="absolute inset-0 gradient-bg" />
-      <div className="absolute inset-0 grid-pattern opacity-40" />
+      <div className="absolute inset-0 grid-pattern opacity-30" />
       
-      {/* Animated Radar Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-20">
-        <div className="absolute inset-0 rounded-full border border-primary/30" />
-        <div className="absolute inset-[15%] rounded-full border border-primary/25" />
-        <div className="absolute inset-[30%] rounded-full border border-primary/20" />
-        <div className="absolute inset-[45%] rounded-full border border-primary/15" />
-        <div className="absolute inset-0 animate-radar-sweep origin-center">
-          <div className="absolute top-1/2 left-1/2 w-1/2 h-0.5 radar-line origin-left" />
-        </div>
-      </div>
-
-      {/* Floating Elements */}
-      <motion.div
-        animate={{ y: [-10, 10, -10] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-1/4 left-[15%] w-16 h-16 rounded-2xl card-glass flex items-center justify-center glow-primary opacity-60"
-      >
-        <Satellite className="w-8 h-8 text-primary" />
-      </motion.div>
-      
-      <motion.div
-        animate={{ y: [10, -10, 10] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        className="absolute top-1/3 right-[12%] w-14 h-14 rounded-2xl card-glass flex items-center justify-center glow-accent opacity-60"
-      >
-        <Radio className="w-7 h-7 text-accent" />
-      </motion.div>
-      
-      <motion.div
-        animate={{ y: [-15, 15, -15] }}
-        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        className="absolute bottom-1/3 left-[10%] w-12 h-12 rounded-xl card-glass flex items-center justify-center opacity-50"
-      >
-        <Shield className="w-6 h-6 text-primary" />
-      </motion.div>
+      {/* Subtle Radial Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-60" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Left Content - Clean & Spacious */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -59,24 +26,24 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full card-glass text-sm font-medium text-primary mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full card-glass text-sm font-medium text-primary mb-10"
             >
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               Next-Gen GPS Technology
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-8">
               <span className="text-foreground">Smart Tracking,</span>
               <br />
               <span className="text-gradient">Telemetry & Control</span>
               <br />
-              <span className="text-foreground">All in One Platform</span>
+              <span className="text-foreground">All in One</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Advanced fleet management with real-time GPS tracking, comprehensive vehicle diagnostics, and intelligent automation for complete operational control.
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-12 leading-relaxed">
+              Advanced fleet management with real-time GPS tracking and intelligent automation for complete operational control.
             </p>
 
             {/* CTA Buttons */}
@@ -97,25 +64,6 @@ export const HeroSection = () => {
                 Live Demo
               </Button>
             </div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex items-center gap-8 mt-12 justify-center lg:justify-start"
-            >
-              {[
-                { value: '50K+', label: 'Vehicles Tracked' },
-                { value: '99.9%', label: 'Uptime' },
-                { value: '24/7', label: 'Support' },
-              ].map((stat, index) => (
-                <div key={index} className="text-center lg:text-left">
-                  <div className="text-2xl sm:text-3xl font-bold text-gradient">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </motion.div>
 
           {/* Right - Dashboard Preview */}
@@ -199,6 +147,25 @@ export const HeroSection = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Stats - Moved Below */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex items-center justify-center gap-12 sm:gap-20 mt-24 pt-12 border-t border-border/30"
+        >
+          {[
+            { value: '50K+', label: 'Vehicles Tracked' },
+            { value: '99.9%', label: 'Uptime' },
+            { value: '24/7', label: 'Support' },
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-gradient">{stat.value}</div>
+              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}
