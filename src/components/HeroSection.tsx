@@ -33,7 +33,7 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.1] mb-8">
               <span className="text-foreground">Smart Tracking,</span>
               <br />
               <span className="text-gradient">Telemetry & Control</span>
@@ -73,63 +73,10 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden glow-primary">
-              {/* Mock Dashboard */}
-              <div className="bg-gradient-to-br from-card to-navy-deep p-6 sm:p-8 rounded-3xl border border-border">
-                {/* Dashboard Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-destructive" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                    <div className="w-3 h-3 rounded-full bg-accent" />
-                  </div>
-                  <div className="text-sm text-muted-foreground">ApptechHubGPS Dashboard</div>
-                </div>
-
-                {/* Map Area */}
-                <div className="relative h-48 sm:h-64 rounded-2xl bg-navy-deep overflow-hidden mb-6">
-                  <div className="absolute inset-0 grid-pattern opacity-30" />
-                  {/* Simulated map points */}
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute top-1/4 left-1/3 w-4 h-4 rounded-full bg-primary animate-pulse-glow"
-                  />
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                    className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-accent animate-pulse-glow"
-                  />
-                  <motion.div
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                    className="absolute bottom-1/4 left-1/2 w-4 h-4 rounded-full bg-primary animate-pulse-glow"
-                  />
-                  {/* Connection lines */}
-                  <svg className="absolute inset-0 w-full h-full">
-                    <line x1="33%" y1="25%" x2="75%" y2="50%" stroke="hsl(var(--primary))" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4" />
-                    <line x1="75%" y1="50%" x2="50%" y2="75%" stroke="hsl(var(--accent))" strokeWidth="1" strokeOpacity="0.3" strokeDasharray="4" />
-                  </svg>
-                </div>
-
-                {/* Stats Row */}
-                <div className="grid grid-cols-3 gap-4">
-                  {[
-                    { label: 'Active', value: '47', color: 'text-accent' },
-                    { label: 'Alerts', value: '3', color: 'text-destructive' },
-                    { label: 'Routes', value: '12', color: 'text-primary' },
-                  ].map((stat, index) => (
-                    <div key={index} className="bg-secondary/50 rounded-xl p-4 text-center">
-                      <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
-                      <div className="text-xs text-muted-foreground">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <img src="/images/hero1.webp" alt="Dashboard Preview" className="w-full max-w-xs rounded-lg mx-auto" />
 
             {/* Floating notification */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, scale: 0.8, x: -20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 1 }}
@@ -144,7 +91,7 @@ export const HeroSection = () => {
                   <div className="text-xs text-muted-foreground">Vehicle secured</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
 

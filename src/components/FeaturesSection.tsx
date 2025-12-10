@@ -90,12 +90,6 @@ const features = [
     description: 'Monitor vehicle and cargo temperature in real-time.',
     color: 'accent',
   },
-  {
-    icon: LayoutDashboard,
-    title: 'Combined Dashboard',
-    description: 'Unified view of fuel and temperature metrics.',
-    color: 'primary',
-  },
 ];
 
 export const FeaturesSection = () => {

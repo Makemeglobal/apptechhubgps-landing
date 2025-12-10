@@ -43,16 +43,8 @@ export const AboutSection = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              ApptechHubGPS delivers cutting-edge GPS tracking and telematics solutions 
-              designed for modern fleet operations. Our platform combines advanced satellite 
-              technology with intuitive software to give you complete visibility and control 
-              over your entire fleet.
-            </p>
+              ApptechHubGPS provides advanced GPS tracking and telematics for modern fleets, offering real-time location data, vehicle diagnostics, and intuitive software tools. The platform helps businesses improve routing, cut costs, and enhance overall safety and efficiency.
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              From real-time location tracking to comprehensive vehicle diagnostics, 
-              we empower businesses to optimize routes, reduce costs, and enhance 
-              safety across all operations.
             </p>
 
             {/* Mini Feature List */}
