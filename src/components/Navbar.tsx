@@ -3,12 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const navLinks = [
-  { name: 'Features', href: '#features' },
-  { name: 'Dashboard', href: '#dashboard' },
-  { name: 'How It Works', href: '#how-it-works' },
-  { name: 'Pricing', href: '#pricing' },
-];
+// Navigation links removed as per request
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,18 +27,8 @@ export const Navbar = () => {
             </span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+          {/* Spacer */}
+          <div className="hidden md:block flex-1" />
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
@@ -74,25 +59,13 @@ export const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden mt-4 card-glass rounded-2xl p-6"
             >
-              <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
-                  <Button variant="ghost" className="text-foreground justify-start">
-                    Login
-                  </Button>
-                  <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold">
-                    Get Started
-                  </Button>
-                </div>
+              <div className="flex flex-col gap-3">
+                <Button variant="ghost" className="text-foreground justify-start">
+                  Login
+                </Button>
+                <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold">
+                  Get Started
+                </Button>
               </div>
             </motion.div>
           )}
