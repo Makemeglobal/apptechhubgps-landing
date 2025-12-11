@@ -60,14 +60,14 @@ export const HeroSection = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
 
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="border-border hover:border-primary/50 text-foreground px-8 py-6 text-lg rounded-xl group"
               >
                 <Play className="mr-2 w-5 h-5 text-primary" />
                 Live Demo
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
 

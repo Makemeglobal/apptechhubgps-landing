@@ -33,12 +33,12 @@ export const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://www.apptechhub.com/contact.html"
+              href="https://www.apptechhub.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium px-6 hover:opacity-90 transition-opacity"
             >
-              Contact Us
+              Home
             </a>
             <Button onClick={() => window.open("https://www.apptechhub.com", "_blank")} size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-6 hover:opacity-90 transition-opacity">
               Get Started
@@ -66,11 +66,11 @@ export const Navbar = () => {
             >
               <div className="flex flex-col gap-3">
                 <Button
-                  onClick={() => window.open("https://www.apptechhub.com/contact.html", "_blank")}
+                  onClick={() => window.open("https://www.apptechhub.com", "_blank")}
                   size="lg"
-                  className="text-foreground justify-start"
+                  className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold"
                 >
-                  Contact Us
+                  Home
                 </Button>
                 <Button onClick={() => window.open("https://www.apptechhub.com", "_blank")} size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold">
                   Get Started
