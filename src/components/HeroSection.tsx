@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Play, ArrowRight, Shield } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { Play, ArrowRight, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
@@ -8,7 +8,7 @@ export const HeroSection = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 gradient-bg" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Subtle Radial Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-60" />
 
@@ -43,18 +43,23 @@ export const HeroSection = () => {
 
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0 mb-12 leading-relaxed">
-              Advanced fleet management with real-time GPS tracking and intelligent automation for complete operational control.
+              Advanced fleet management with real-time GPS tracking and
+              intelligent automation for complete operational control.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <Button
+                onClick={() =>
+                  window.open("https://www.apptechhub.com", "_blank")
+                }
                 size="lg"
                 className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-8 py-6 text-lg rounded-xl hover:opacity-90 transition-all duration-300 glow-primary group"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
+
               <Button
                 variant="outline"
                 size="lg"
@@ -68,12 +73,17 @@ export const HeroSection = () => {
 
           {/* Right - Dashboard Preview */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 50, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <img src="/images/hero1.webp" alt="Dashboard Preview" className="w-full max-w-xs rounded-lg mx-auto" />
+            
+            <img
+              src="/images/hero.webp"
+              alt="Dashboard Preview"
+              className="w-full max-w-60 rounded-2xl mx-auto"
+            />
 
             {/* Floating notification */}
             {/* <motion.div
@@ -103,13 +113,17 @@ export const HeroSection = () => {
           className="flex items-center justify-center gap-12 sm:gap-20 mt-24 pt-12 border-t border-border/30"
         >
           {[
-            { value: '50K+', label: 'Vehicles Tracked' },
-            { value: '99.9%', label: 'Uptime' },
-            { value: '24/7', label: 'Support' },
+            { value: "50K+", label: "Vehicles Tracked" },
+            { value: "99.9%", label: "Uptime" },
+            { value: "24/7", label: "Support" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gradient">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-gradient">
+                {stat.value}
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">
+                {stat.label}
+              </div>
             </div>
           ))}
         </motion.div>

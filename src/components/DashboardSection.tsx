@@ -74,7 +74,7 @@ export const DashboardSection = () => {
           {/* Glow effect */}
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-[2.5rem] blur-3xl opacity-60" />
           
-          <img src="/images/dashboard1.webp" alt="Dashboard Preview" className="w-full max-w-6xl rounded-lg mx-auto p-20" />
+          <img src="/images/dashboard1.webp" alt="Dashboard Preview" className="w-full max-w-6xl rounded-lg mx-auto sm:p-20" />
         </motion.div>
 
         {/* Highlight Cards */}

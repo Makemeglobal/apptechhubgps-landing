@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // Navigation links removed as per request
 
@@ -12,7 +12,7 @@ export const Navbar = () => {
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
     >
       <div className="max-w-7xl mx-auto">
@@ -32,10 +32,15 @@ export const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              Login
-            </Button>
-            <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-6 hover:opacity-90 transition-opacity">
+            <a
+              href="https://www.apptechhub.com/contact.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium px-6 hover:opacity-90 transition-opacity"
+            >
+              Contact Us
+            </a>
+            <Button onClick={() => window.open("https://www.apptechhub.com", "_blank")} size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-6 hover:opacity-90 transition-opacity">
               Get Started
             </Button>
           </div>
@@ -60,10 +65,14 @@ export const Navbar = () => {
               className="md:hidden mt-4 card-glass rounded-2xl p-6"
             >
               <div className="flex flex-col gap-3">
-                <Button variant="ghost" className="text-foreground justify-start">
-                  Login
+                <Button
+                  onClick={() => window.open("https://www.apptechhub.com/contact.html", "_blank")}
+                  size="lg"
+                  className="text-foreground justify-start"
+                >
+                  Contact Us
                 </Button>
-                <Button className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold">
+                <Button onClick={() => window.open("https://www.apptechhub.com", "_blank")} size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold">
                   Get Started
                 </Button>
               </div>
